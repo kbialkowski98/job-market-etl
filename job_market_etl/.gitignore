@@ -1,0 +1,11 @@
+job_market_etl/data/
+job_market_etl/logs/
+
+*.db
+*.sqlite3
+
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
