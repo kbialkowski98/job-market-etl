@@ -1,72 +1,78 @@
-import os
 import json
-import requests
 import logging
+import os
 
-os.makedirs("job_market_etl/logs", exist_ok=True)
+import requests
+
+import config
+
+# Konfiguracja struktury katalogów i logowania
+os.makedirs(config.LOG_DIR, exist_ok=True)
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)-8s | %(module)s:%(lineno)d | %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[
-        logging.FileHandler("job_market_etl/logs/job_market_etl.log"),
+        logging.FileHandler(config.LOG_FILE_PATH, encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
 
 logger = logging.getLogger(__name__)
 
-URL = "https://nofluffjobs.com/pl"
-URL_POST = "https://nofluffjobs.com/api/search/posting"
-
 def extract_jobs():
+    # 1. Inicjalizacja sesji i ustawienie nagłówków
     session = requests.Session()
-
     session.headers.update({
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
         "Accept": "application/json",
         "Content-Type": "application/infiniteSearch+json",
         "nfj-global-context": '{"region":"PL","lang":"pl","global_salary_match_enabled":true}'
     })
-
     logger.info("Sesja zainicjalizowana.")
 
-    session.get(URL)
-    logger.info("Pobrano ciasteczka")
+    # 2. Odwiedzenie strony głównej w celu pobrania ciasteczek
+    session.get(config.API_BASE_URL)
+    logger.info("Pobrano ciasteczka.")
 
+    # 3. Przygotowanie parametrów zapytania i payloadu
     params = {
-            'pageFrom': '1',
-            'withSalaryMatch': 'true',
-            'pageTo': '1',
-            'pageSize': '20',
-            'region': 'pl',
-            'salaryCurrency': 'original',
-            'salaryPeriod': 'original',
-        }
+        'pageFrom': '1',
+        'withSalaryMatch': 'true',
+        'pageTo': '1',
+        'pageSize': '20',
+        'region': 'pl',
+        'salaryCurrency': 'original',
+        'salaryPeriod': 'original',
+    }
 
     data = '{"criteriaSearch":{"category":["data"]},"pageSize":20,"withSalaryMatch":true}'
 
+    # 4. Komunikacja z API i zapis danych
     try:
-        response = session.post(URL_POST, params=params, data=data)
-
+        response = session.post(config.API_POST_URL, params=params, data=data)
         response.raise_for_status()
         logger.info("Odpowiedź otrzymana pomyślnie.")
 
         response_json = response.json()
 
-        os.makedirs("job_market_etl/data", exist_ok=True)
-        with open("job_market_etl/data/raw_jobs.json", "w", encoding="utf-8") as f:
+        os.makedirs(config.DATA_DIR, exist_ok=True)
+        with open(config.RAW_DATA_PATH, "w", encoding="utf-8") as f:
             json.dump(response_json, f, ensure_ascii=False, indent=4)
-        logger.info("Dane zapisane do pliku raw_jobs.json")
+            
+        logger.info(f"Dane zapisane do pliku: {config.RAW_DATA_PATH}")
 
     except requests.exceptions.RequestException as e:
-        logger.error(f"Wystąpił błąd: {e}")
+        logger.error(f"Wystąpił błąd komunikacji z API: {e}")
         if e.response is not None:
             logger.error(f"Treść odpowiedzi: {e.response.text}")
 
     except OSError as e:
         logger.error(f"Wystąpił błąd podczas zapisywania pliku: {e}")
 
+
 if __name__ == "__main__":
+    logger.info("Rozpoczynam proces ekstrakcji danych...")
     extract_jobs()
+    logger.info("Proces ekstrakcji zakończony.")

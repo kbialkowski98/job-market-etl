@@ -1,0 +1,4936 @@
+{
+    "postings": [
+        {
+            "id": "data-engineer-connectis--Warszawa-12",
+            "name": "Connectis_",
+            "title": "Data Engineer",
+            "salary": {
+                "salary_from": 22000.0,
+                "salary_to": 26000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 24000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Azure Data Lake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-Remote",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-Warszawa",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-lower-silesian",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-kuyavian-pomeranian",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-lodz",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-lublin",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-lubusz",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-lesser-poland",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-opole",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-subcarpathian",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-podlaskie",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-pomeranian",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-silesian",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-holy-cross",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-warmian-masurian",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-greater-poland",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-engineer-azure-snowflake-devops-vecten-west-pomeranian",
+            "name": "Vecten",
+            "title": "Senior Data Engineer (Azure / Snowflake / DevOps)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "ETL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--Remote",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--Warszawa",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--lower-silesian",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--kuyavian-pomeranian",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--lodz",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--lublin",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--lubusz",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--lesser-poland",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--opole",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--subcarpathian",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--podlaskie",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--pomeranian",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--silesian",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--holy-cross",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--warmian-masurian",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--greater-poland",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-analyst-snowflake-connectis--west-pomeranian",
+            "name": "Connectis_",
+            "title": "Data Product Analyst (Snowflake)",
+            "salary": {
+                "salary_from": 29500.0,
+                "salary_to": 34500.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data modeling",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "lead-kafka-consultant-x1f-Warszawa",
+            "name": "x1F",
+            "title": "Lead Kafka Consultant",
+            "salary": {
+                "salary_from": 31000.0,
+                "salary_to": 37000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 34000.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Expert"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Kafka",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Data pipelines",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-Remote",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-lower-silesian",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-kuyavian-pomeranian",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-lodz",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-lublin",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-lubusz",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-lesser-poland",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-masovian",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-opole",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-subcarpathian",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-podlaskie",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-pomeranian",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-silesian",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-holy-cross",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-warmian-masurian",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-greater-poland",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "azure-data-platform-engineer-m-f-stackmine-west-pomeranian",
+            "name": "Stackmine",
+            "title": "Azure Data Platform Engineer [M/F]",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 195.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 177.5
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Azure",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Microsoft Fabric",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "en",
+                        "type": "jobLanguage"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "mlodszy-analityk-przetwarzania-danych-upvanta-Wrocław",
+            "name": "Upvanta",
+            "title": "Młodszy Analityk Przetwarzania Danych",
+            "salary": {
+                "salary_from": 350.0,
+                "salary_to": 480.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 415.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Go",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Golang",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-Remote",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-Warszawa",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-lower-silesian",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-kuyavian-pomeranian",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-lodz",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-lublin",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-lubusz",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-lesser-poland",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-opole",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-subcarpathian",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-podlaskie",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-pomeranian",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-silesian",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-holy-cross",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-warmian-masurian",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-greater-poland",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-enginner-link-group-west-pomeranian",
+            "name": "Link Group",
+            "title": "Senior Data Enginner",
+            "salary": {
+                "salary_from": 20000.0,
+                "salary_to": 27000.0,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": 23500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PySpark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "hr-data-analyst-antal-Wrocław",
+            "name": "Antal",
+            "title": "HR Data Analyst",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Business analysis",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "PowerApps",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Power BI",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--Remote",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--lower-silesian",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--kuyavian-pomeranian",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--lodz",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--lublin",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--lubusz",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--lesser-poland",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--masovian",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--opole",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--subcarpathian",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--podlaskie",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--pomeranian",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--silesian",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--holy-cross",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--warmian-masurian",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--greater-poland",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-product-specialist-google-stack-connectis--west-pomeranian",
+            "name": "Connectis_",
+            "title": "Data Product Specialist (Google Stack)",
+            "salary": {
+                "salary_from": 30000.0,
+                "salary_to": 35000.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 32500.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Google Analytics",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "BigQuery",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-senior-data-engineer-moondigo-Warszawa",
+            "name": "Moondigo Sp. z o.o.",
+            "title": "Data Engineer / Senior Data Engineer",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Git",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-scientist-belvedere-recruitment-Krakow",
+            "name": "Belvedere Recruitment",
+            "title": "Senior Data Scientist",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Data engineering",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Airflow",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Spark",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-product-data-analyst-connectis--Warszawa",
+            "name": "Connectis_",
+            "title": "Senior Product Data Analyst",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "A/B Testing",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Mixpanel",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-delivery-manager-xebia-Warszawa",
+            "name": "Xebia sp. z o.o.",
+            "title": "Senior Delivery Manager",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "People Management",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Agile",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-delivery-manager-xebia-Rzeszów",
+            "name": "Xebia sp. z o.o.",
+            "title": "Senior Delivery Manager",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "People Management",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Agile",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-delivery-manager-xebia-Gdańsk",
+            "name": "Xebia sp. z o.o.",
+            "title": "Senior Delivery Manager",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "People Management",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Agile",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-delivery-manager-xebia-Wrocław",
+            "name": "Xebia sp. z o.o.",
+            "title": "Senior Delivery Manager",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "People Management",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Agile",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-architect-databricks-bulgaria-deloitte-Sofia",
+            "name": "Deloitte",
+            "title": "Data Architect – Databricks | Bulgaria",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "EUR",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Expert"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Databricks",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Machine learning",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-architect-databricks-bulgaria-deloitte-Varna",
+            "name": "Deloitte",
+            "title": "Data Architect – Databricks | Bulgaria",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "EUR",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Expert"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Databricks",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Machine learning",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-software-engineer-lead-software-engineer-big-data-antal-Kraków-1",
+            "name": "Antal",
+            "title": "Senior Software Engineer / Lead Software Engineer (Big Data)",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Spark",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Java",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Scala",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-databricks-bulgaria-deloitte-Sofia",
+            "name": "Deloitte",
+            "title": "Data Engineer - Databricks | Bulgaria",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "EUR",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Cloud platform",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Databricks",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-databricks-bulgaria-deloitte-Varna",
+            "name": "Deloitte",
+            "title": "Data Engineer - Databricks | Bulgaria",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "EUR",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Cloud platform",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Databricks",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "AI",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-data-scientist-scalo-Warszawa",
+            "name": "Scalo",
+            "title": "Senior Data Scientist",
+            "salary": {
+                "salary_from": 135.0,
+                "salary_to": 145.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 140.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Mid"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Machine learning",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "scikit-learn",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "senior-business-intelligence-consultant-ey-Katowice",
+            "name": "EY",
+            "title": "Senior Business Intelligence Consultant",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "business-intelligence",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Power BI",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Security",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-Remote",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-lower-silesian",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-kuyavian-pomeranian",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-lodz",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-lublin",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-lubusz",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-lesser-poland",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-masovian",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-opole",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-subcarpathian",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-podlaskie",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-pomeranian",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-silesian",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-holy-cross",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-warmian-masurian",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-greater-poland",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "collections-analyst-remote-antal-west-pomeranian",
+            "name": "Antal",
+            "title": "Collections Analyst | Remote",
+            "salary": {
+                "salary_from": null,
+                "salary_to": null,
+                "type": "permanent",
+                "currency": "PLN",
+                "salary_avg": null
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Junior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Communication skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Interpersonal skills",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "MS Office",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-Remote",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-lower-silesian",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-kuyavian-pomeranian",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-lodz",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-lublin",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-lubusz",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-lesser-poland",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-masovian",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-opole",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-subcarpathian",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-podlaskie",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-pomeranian",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-silesian",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-holy-cross",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-warmian-masurian",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-greater-poland",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "data-engineer-snowflake-sql-avenga-agencja-pracy-nr-kraz-8448-west-pomeranian",
+            "name": "AVENGA (Agencja Pracy, nr KRAZ: 8448)",
+            "title": "Data Engineer (Snowflake / SQL) ",
+            "salary": {
+                "salary_from": 160.0,
+                "salary_to": 170.0,
+                "type": "b2b",
+                "currency": "PLN",
+                "salary_avg": 165.0
+            },
+            "fullyRemote": false,
+            "seniority": [
+                "Senior"
+            ],
+            "tiles": {
+                "values": [
+                    {
+                        "value": "data",
+                        "type": "category"
+                    },
+                    {
+                        "value": "Python",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "SQL",
+                        "type": "requirement"
+                    },
+                    {
+                        "value": "Snowflake",
+                        "type": "requirement"
+                    }
+                ]
+            }
+        }
+    ]
+}

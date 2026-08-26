@@ -1,0 +1,21 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# API
+API_BASE_URL = "https://nofluffjobs.com/pl"
+API_POST_URL = "https://nofluffjobs.com/api/search/posting"
+
+# Struktura katalogów i plików
+DATA_DIR = "job_market_etl/data"
+LOG_DIR = "job_market_etl/logs"
+
+RAW_DATA_PATH = f"{DATA_DIR}/raw_jobs.json"
+VALIDATED_DATA_PATH = f"{DATA_DIR}/validated_jobs.json"
+LOG_FILE_PATH = f"{LOG_DIR}/job_market_etl.log"
+
+# env
+DB_HOST = os.getenv("DB_HOST", "localhost")
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
