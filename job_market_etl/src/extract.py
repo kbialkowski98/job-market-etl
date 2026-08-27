@@ -5,23 +5,15 @@ import os
 import requests
 
 import config
+from logger_setup import setup_logger
 
-# Konfiguracja struktury katalogów i logowania
-os.makedirs(config.LOG_DIR, exist_ok=True)
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)-8s | %(module)s:%(lineno)d | %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    handlers=[
-        logging.FileHandler(config.LOG_FILE_PATH, encoding="utf-8"),
-        logging.StreamHandler()
-    ]
-)
+# Logger setup
+setup_logger()
 
 logger = logging.getLogger(__name__)
 
-def extract_jobs():
+def extract_jobs() -> dict:
     # 1. Inicjalizacja sesji i ustawienie nagłówków
     session = requests.Session()
     session.headers.update({
@@ -63,16 +55,14 @@ def extract_jobs():
             
         logger.info(f"Dane zapisane do pliku: {config.RAW_DATA_PATH}")
 
+        return response_json
+
     except requests.exceptions.RequestException as e:
         logger.error(f"Wystąpił błąd komunikacji z API: {e}")
         if e.response is not None:
             logger.error(f"Treść odpowiedzi: {e.response.text}")
+        raise
 
     except OSError as e:
         logger.error(f"Wystąpił błąd podczas zapisywania pliku: {e}")
-
-
-if __name__ == "__main__":
-    logger.info("Rozpoczynam proces ekstrakcji danych...")
-    extract_jobs()
-    logger.info("Proces ekstrakcji zakończony.")
+        raise

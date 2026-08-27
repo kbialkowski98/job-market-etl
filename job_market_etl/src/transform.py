@@ -6,19 +6,10 @@ from typing import Optional
 from pydantic import BaseModel, Field, computed_field
 
 import config
+from logger_setup import setup_logger
 
-# Konfiguracja struktury katalogów i logowania
-os.makedirs(config.LOG_DIR, exist_ok=True)
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)-8s | %(module)s:%(lineno)d | %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    handlers=[
-        logging.FileHandler(config.LOG_FILE_PATH, encoding="utf-8"),
-        logging.StreamHandler()
-    ]
-)
+# Logger setup
+setup_logger()
 
 logger = logging.getLogger(__name__)
 
@@ -60,18 +51,9 @@ class NFJResponse(BaseModel):
     postings: list[JobPosting] = []
 
 
-def transform_jobs():
+def transform_jobs(raw_data: dict) -> list[JobPosting]:
     logger.info("Rozpoczynam proces transformacji (Transform)...")
-    
-    
-    if not os.path.exists(config.RAW_DATA_PATH):
-        logger.error(f"Nie znaleziono pliku: {config.RAW_DATA_PATH}. Uruchom najpierw extract.py!")
-        return
-
-    with open(config.RAW_DATA_PATH, "r", encoding="utf-8") as f:
-        raw_data = json.load(f)
-
-    logger.info("Dane wczytane z dysku. Rozpoczynam walidację Pydantic...")
+    logger.info("Rozpoczynam walidację Pydantic...")
 
     try:
         validated_data = NFJResponse(**raw_data)
@@ -84,9 +66,8 @@ def transform_jobs():
                 f.write(validated_data.model_dump_json(indent=4))
             logger.info(f"Zapisano zwalidowane dane do pliku: {config.VALIDATED_DATA_PATH}")
             
+        return validated_data.postings
+            
     except Exception as e:
         logger.error(f"Błąd walidacji danych: {e}")
-
-
-if __name__ == "__main__":
-    transform_jobs()
+        raise

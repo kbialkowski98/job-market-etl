@@ -15,6 +15,8 @@ RAW_DATA_PATH = f"{DATA_DIR}/raw_jobs.json"
 VALIDATED_DATA_PATH = f"{DATA_DIR}/validated_jobs.json"
 LOG_FILE_PATH = f"{LOG_DIR}/job_market_etl.log"
 
+DB_URL = f"sqlite:///{DATA_DIR}/jobs.db"
+
 # env
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_USER = os.getenv("DB_USER")
