@@ -1,5 +1,5 @@
-job_market_etl/data/
-job_market_etl/logs/
+data/
+logs/
 
 *.db
 *.sqlite3
