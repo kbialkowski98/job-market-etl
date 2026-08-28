@@ -7,8 +7,8 @@ load_dotenv()
 API_BASE_URL = "https://nofluffjobs.com/pl"
 API_POST_URL = "https://nofluffjobs.com/api/search/posting"
 
-DATA_DIR = "job_market_etl/data"
-LOG_DIR = "job_market_etl/logs"
+DATA_DIR = "data"
+LOG_DIR = "logs"
 
 RAW_DATA_PATH = f"{DATA_DIR}/raw_jobs.json"
 VALIDATED_DATA_PATH = f"{DATA_DIR}/validated_jobs.json"
