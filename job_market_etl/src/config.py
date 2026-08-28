@@ -1,13 +1,12 @@
 import os
+
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# API
 API_BASE_URL = "https://nofluffjobs.com/pl"
 API_POST_URL = "https://nofluffjobs.com/api/search/posting"
 
-# Struktura katalogów i plików
 DATA_DIR = "job_market_etl/data"
 LOG_DIR = "job_market_etl/logs"
 
@@ -17,7 +16,6 @@ LOG_FILE_PATH = f"{LOG_DIR}/job_market_etl.log"
 
 DB_URL = f"sqlite:///{DATA_DIR}/jobs.db"
 
-# env
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")

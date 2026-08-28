@@ -1,8 +1,11 @@
 import logging
 import os
-import config
+
+from src import config
+
 
 def setup_logger():
+    # Konfiguracja logowania
     os.makedirs(config.LOG_DIR, exist_ok=True)
 
     logging.basicConfig(
@@ -11,6 +14,6 @@ def setup_logger():
         datefmt="%Y-%m-%d %H:%M:%S",
         handlers=[
             logging.FileHandler(config.LOG_FILE_PATH, encoding="utf-8"),
-            logging.StreamHandler()
-        ]
+            logging.StreamHandler(),
+        ],
     )

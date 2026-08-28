@@ -1,36 +1,32 @@
 import logging
 
-from extract import extract_jobs
-from transform import transform_jobs
-from load import load_jobs
-from logger_setup import setup_logger
+from src.etl.extract import extract_jobs
+from src.etl.load import load_jobs
+from src.etl.transform import transform_jobs
+from src.utils.logger_setup import setup_logger
 
-# 1. Konfiguracja logowania dla Orkiestratora
+# Konfiguracja logowania
 setup_logger()
 logger = logging.getLogger(__name__)
 
 
 def run_etl():
-    logger.info("==== START PROCESU ETL ====")
-    
+    logger.info("Rozpoczecie procesu ETL.")
+
     try:
-        # Krok 1: Extract
-        logger.info("-> Rozpoczynam Krok 1/3: Pobieranie danych...")
+        logger.info("Etap 1: Pobieranie danych (Extract).")
         raw_data = extract_jobs()
-        
-        # Krok 2: Transform
-        logger.info("-> Rozpoczynam Krok 2/3: Transformacja i walidacja...")
+
+        logger.info("Etap 2: Transformacja i walidacja (Transform).")
         clean_data = transform_jobs(raw_data)
-        
-        # Krok 3: Load
-        logger.info("-> Rozpoczynam Krok 3/3: Ładowanie do bazy danych...")
+
+        logger.info("Etap 3: Zapis do bazy (Load).")
         load_jobs(clean_data)
-        
-        logger.info("==== PROCES ETL ZAKOŃCZONY POMYŚLNIE ====")
-        
+
+        logger.info("Proces ETL zakonczony pomyslnie.")
+
     except Exception as e:
-        logger.error("==== BŁĄD: PROCES ETL PRZERWANY ====")
-        logger.error(f"Szczegóły błędu: {e}")
+        logger.error(f"Proces ETL przerwany z powodu bledu: {e}")
 
 
 if __name__ == "__main__":
