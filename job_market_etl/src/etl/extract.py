@@ -32,7 +32,7 @@ def extract_jobs() -> dict:
         "pageFrom": "1",
         "withSalaryMatch": "true",
         "pageTo": "1",
-        "pageSize": "20",
+        "pageSize": "100",
         "region": "pl",
         "salaryCurrency": "original",
         "salaryPeriod": "original",
