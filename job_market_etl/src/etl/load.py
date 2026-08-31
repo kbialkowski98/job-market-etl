@@ -66,19 +66,15 @@ def load_jobs(jobs_list: list[JobPosting]):
                 name=item.name,
                 title=item.title,
                 offer_url=item.offer_url,
-
                 salary_from=item.salary.salary_from if item.salary else None,
                 salary_to=item.salary.salary_to if item.salary else None,
                 salary_avg=item.salary.salary_avg if item.salary else None,
-
                 monthly_salary_from=item.salary.monthly_salary_from,
                 monthly_salary_to=item.salary.monthly_salary_to,
                 monthly_salary_avg=item.salary.monthly_salary_avg,
-
                 salary_period=item.salary.period if item.salary else None,
                 salary_type=item.salary.type if item.salary else None,
                 salary_currency=item.salary.currency if item.salary else None,
-
                 fully_remote=item.fullyRemote,
                 seniority=seniority_str,
                 technologies=technologies_str,

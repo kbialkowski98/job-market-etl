@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+REQUEST_DELAY_SECONDS = 1
+
 API_BASE_URL = "https://nofluffjobs.com/pl"
 API_POST_URL = "https://nofluffjobs.com/api/search/posting"
 

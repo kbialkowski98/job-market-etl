@@ -25,7 +25,9 @@ class SalaryInfo(BaseModel):
             return (self.salary_from + self.salary_to) / 2
         return self.salary_from or self.salary_to
 
-    def _normalize_to_month(self, amount: Optional[float], period: Optional[str]) -> Optional[float]:
+    def _normalize_to_month(
+        self, amount: Optional[float], period: Optional[str]
+    ) -> Optional[float]:
         if amount is None or period is None:
             return amount
 
@@ -44,18 +46,15 @@ class SalaryInfo(BaseModel):
 
         return round(amount * multiplier[period_lower], 2)
 
-
     @computed_field
     @property
     def monthly_salary_from(self) -> Optional[float]:
         return self._normalize_to_month(self.salary_from, self.period)
 
-
     @computed_field
     @property
     def monthly_salary_to(self) -> Optional[float]:
         return self._normalize_to_month(self.salary_to, self.period)
-
 
     @computed_field
     @property
@@ -82,7 +81,6 @@ class JobPosting(BaseModel):
     seniority: Optional[list[str]] = None
     tiles: Optional[TilesInfo] = None
 
-
     @computed_field
     @property
     def offer_url(self) -> str:
@@ -106,7 +104,9 @@ def transform_jobs(raw_data: dict) -> list[JobPosting]:
         if jobs_count > 0:
             with open(config.VALIDATED_DATA_PATH, "w", encoding="utf-8") as f:
                 f.write(validated_data.model_dump_json(indent=4))
-            logger.info(f"Zapisano zwalidowane dane do pliku: {config.VALIDATED_DATA_PATH}")
+            logger.info(
+                f"Zapisano zwalidowane dane do pliku: {config.VALIDATED_DATA_PATH}"
+            )
 
         return validated_data.postings
 
