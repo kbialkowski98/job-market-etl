@@ -44,8 +44,9 @@ class Job(Base):
     technologies: Mapped[Optional[str]] = mapped_column(String, nullable=True)
 
 
+# Load
 def load_jobs(jobs_list: list[JobPosting]):
-    # Load
+    
     logger.info("Rozpoczeto ladowanie danych do bazy.")
 
     Base.metadata.create_all(engine)

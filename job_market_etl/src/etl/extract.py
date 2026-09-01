@@ -12,15 +12,12 @@ from src.utils.logger_setup import setup_logger
 setup_logger()
 logger = logging.getLogger(__name__)
 
-
-
-
 def extract_jobs() -> dict:
     # Extract
     session = requests.Session()
     session.headers.update(
         {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+            "User-Agent": config.USER_AGENT,
             "Accept": "application/json",
             "Content-Type": "application/infiniteSearch+json",
             "nfj-global-context": '{"region":"PL","lang":"pl","global_salary_match_enabled":true}',
