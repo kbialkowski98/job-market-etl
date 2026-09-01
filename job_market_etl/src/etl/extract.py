@@ -33,14 +33,14 @@ def extract_jobs() -> dict:
 
     all_postings = []
     page = 1
-    page_size = 100
+
 
     # Pobieranie ofert pracy z API w pętli
     while True:
         params = {
             "pageFrom": str(page),
             "pageTo": str(page),
-            "pageSize": str(page_size),
+            "pageSize": str(config.API_PAGE_SIZE),
             "withSalaryMatch": "true",
             "region": "pl",
             "salaryCurrency": "original",
@@ -50,22 +50,37 @@ def extract_jobs() -> dict:
         payload = json.dumps(
             {
                 "criteriaSearch": {"category": ["data"]},
-                "pageSize": page_size,
+                "pageSize": config.API_PAGE_SIZE,
                 "withSalaryMatch": True,
             }
         )
 
-        try:
-            response = session.post(config.API_POST_URL, params=params, data=payload)
-            response.raise_for_status()
-            logger.info(f"Odpowiedz z API odebrana pomyslnie (strona {page}).")
-        except requests.exceptions.RequestException as e:
-            logger.error(f"Blad komunikacji z API: {e}")
-            if e.response is not None:
-                logger.error(f"Tresc odpowiedzi: {e.response.text}")
-            raise
+        # Obsługa błędów i ponawianie prób w przypadku niepowodzenia
+        for attempt in range(config.MAX_RETRIES):
+
+            try:
+                response = session.post(config.API_POST_URL, params=params, data=payload)
+                response.raise_for_status()
+                logger.info(f"Odpowiedz z API odebrana pomyslnie (strona {page}).")
+                break
+
+            except requests.exceptions.RequestException as e:
+                logger.warning(f"Blad komunikacji z API (proba {attempt + 1}/{config.MAX_RETRIES}): {e}")
+
+                if attempt == config.MAX_RETRIES - 1:
+                    logger.error("Wyczerpano limit prob. Przerwanie skryptu.")
+
+                    if e.response is not None:
+                        logger.error(f"Tresc odpowiedzi: {e.response.text}")
+                    raise
+
+                sleep_time = (2 ** attempt) * config.BASE_BACKOFF_SECONDS
+                logger.info(f"Czekam {sleep_time} sekund przed kolejna proba...")
+                time.sleep(sleep_time)
+
 
         page_json = response.json()
+
         postings = page_json.get("postings", [])
 
         if not postings:
@@ -74,7 +89,7 @@ def extract_jobs() -> dict:
         all_postings.extend(postings)
         logger.info(f"Pobrano {len(postings)} ofert pracy ze strony {page}.")
 
-        if len(postings) < page_size:
+        if len(postings) < config.API_PAGE_SIZE:
             break
 
         page += 1

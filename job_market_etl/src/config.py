@@ -21,3 +21,10 @@ DB_URL = f"sqlite:///{DATA_DIR}/jobs.db"
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
+
+#extract.py
+API_PAGE_SIZE = 100
+REQUEST_DELAY_SECONDS = 1
+
+MAX_RETRIES = 3
+BASE_BACKOFF_SECONDS = 2

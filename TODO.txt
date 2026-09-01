@@ -1,3 +1,6 @@
-1. Dynamiczne odpytywanie API o strony z oferami.
 2. Ponawianie requesta do 3 razy
 3. Zmiana na bulk insert
+4. Load do chmury
+5. Stworzenie .env.example
+6. Retry extract.py
+7. Naprawa walidacja per rekord
