@@ -46,7 +46,7 @@ class Job(Base):
 
 # Load
 def load_jobs(jobs_list: list[JobPosting]):
-    
+
     logger.info("Rozpoczeto ladowanie danych do bazy.")
 
     Base.metadata.create_all(engine)
@@ -59,8 +59,7 @@ def load_jobs(jobs_list: list[JobPosting]):
         for item in jobs_list:
             seniority_str = ", ".join(item.seniority) if item.seniority else None
 
-            tech_list = [t.value for t in item.tiles.values] if item.tiles else []
-            technologies_str = ", ".join(tech_list) if tech_list else None
+            technologies_str = ", ".join(item.technologies) if item.technologies else None
 
             db_job = Job(
                 id=item.id,

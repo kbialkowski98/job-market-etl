@@ -12,6 +12,7 @@ from src.utils.logger_setup import setup_logger
 setup_logger()
 logger = logging.getLogger(__name__)
 
+
 def extract_jobs() -> dict:
     # Extract
     session = requests.Session()
@@ -30,7 +31,6 @@ def extract_jobs() -> dict:
 
     all_postings = []
     page = 1
-
 
     # Pobieranie ofert pracy z API w pętli
     while True:
@@ -56,13 +56,17 @@ def extract_jobs() -> dict:
         for attempt in range(config.MAX_RETRIES):
 
             try:
-                response = session.post(config.API_POST_URL, params=params, data=payload)
+                response = session.post(
+                    config.API_POST_URL, params=params, data=payload
+                )
                 response.raise_for_status()
                 logger.info(f"Odpowiedz z API odebrana pomyslnie (strona {page}).")
                 break
 
             except requests.exceptions.RequestException as e:
-                logger.warning(f"Blad komunikacji z API (proba {attempt + 1}/{config.MAX_RETRIES}): {e}")
+                logger.warning(
+                    f"Blad komunikacji z API (proba {attempt + 1}/{config.MAX_RETRIES}): {e}"
+                )
 
                 if attempt == config.MAX_RETRIES - 1:
                     logger.error("Wyczerpano limit prob. Przerwanie skryptu.")
@@ -71,10 +75,9 @@ def extract_jobs() -> dict:
                         logger.error(f"Tresc odpowiedzi: {e.response.text}")
                     raise
 
-                sleep_time = (2 ** attempt) * config.BASE_BACKOFF_SECONDS
+                sleep_time = (2**attempt) * config.BASE_BACKOFF_SECONDS
                 logger.info(f"Czekam {sleep_time} sekund przed kolejna proba...")
                 time.sleep(sleep_time)
-
 
         page_json = response.json()
 

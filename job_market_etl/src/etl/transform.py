@@ -1,7 +1,8 @@
 import logging
 from typing import Optional
+import json
 
-from pydantic import BaseModel, Field, computed_field
+from pydantic import BaseModel, Field, computed_field, ValidationError
 
 from src import config
 from src.utils.logger_setup import setup_logger
@@ -86,30 +87,52 @@ class JobPosting(BaseModel):
     def offer_url(self) -> str:
         return f"{config.API_BASE_URL}/job/{self.url}"
 
-
-class NFJResponse(BaseModel):
-    postings: list[JobPosting] = []
+    @computed_field
+    @property
+    def technologies(self) -> list[str]:
+        if not self.tiles:
+            return []
+        return [t.value for t in self.tiles.values if t.type == "requirement"]
 
 
 def transform_jobs(raw_data: dict) -> list[JobPosting]:
     # Transform
     logger.info("Rozpoczeto transformacje i walidacje danych.")
 
-    try:
-        validated_data = NFJResponse(**raw_data)
+    valid_postings = []
+    raw_postings = raw_data.get("postings", [])
 
-        jobs_count = len(validated_data.postings)
-        logger.info(f"Zwalidowano pomyslnie {jobs_count} ofert pracy.")
+    # Walidacja per rekord
+    for raw_item in raw_postings:
+        try:
+            job_posting = JobPosting(**raw_item)
+            valid_postings.append(job_posting)
 
-        if jobs_count > 0:
+        except ValidationError as ve:
+            job_url = raw_item.get("url", "Nieznany URL")
+            logger.error(f"Blad walidacji danych dla ogloszenia {job_url}: {ve}")
+
+        except Exception as e:
+            logger.error(f"Nieoczekiwany blad podczas przetwarzania rekordu: {e}")
+
+    jobs_count = len(valid_postings)
+    logger.info(
+        f"Zwalidowano pomyslnie {jobs_count} z {len(raw_postings)} ofert pracy."
+    )
+
+    # Zapis zwalidowanych danych do pliku JSON
+    if jobs_count > 0:
+        try:
+            validated_json_data = [job.model_dump() for job in valid_postings]
             with open(config.VALIDATED_DATA_PATH, "w", encoding="utf-8") as f:
-                f.write(validated_data.model_dump_json(indent=4))
+                json.dump(validated_json_data, f, ensure_ascii=False, indent=4)
             logger.info(
                 f"Zapisano zwalidowane dane do pliku: {config.VALIDATED_DATA_PATH}"
             )
+        except Exception as e:
+            logger.error(
+                f"Nieoczekiwany blad podczas zapisywania zwalidowanych danych: {e}"
+            )
+            raise
 
-        return validated_data.postings
-
-    except Exception as e:
-        logger.error(f"Blad walidacji danych: {e}")
-        raise
+    return valid_postings
