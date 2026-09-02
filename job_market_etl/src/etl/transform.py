@@ -1,13 +1,12 @@
+import json
 import logging
 from typing import Optional
-import json
 
-from pydantic import BaseModel, Field, computed_field, ValidationError
+from pydantic import BaseModel, Field, ValidationError, computed_field
 
 from src import config
 from src.utils.logger_setup import setup_logger
 
-# Konfiguracja logowania
 setup_logger()
 logger = logging.getLogger(__name__)
 
@@ -19,16 +18,7 @@ class SalaryInfo(BaseModel):
     currency: Optional[str] = None
     period: Optional[str] = None
 
-    @computed_field
-    @property
-    def salary_avg(self) -> Optional[float]:
-        if self.salary_from is not None and self.salary_to is not None:
-            return (self.salary_from + self.salary_to) / 2
-        return self.salary_from or self.salary_to
-
-    def _normalize_to_month(
-        self, amount: Optional[float], period: Optional[str]
-    ) -> Optional[float]:
+    def _normalize_to_month(self, amount: Optional[float], period: Optional[str]) -> Optional[float]:
         if amount is None or period is None:
             return amount
 
@@ -46,6 +36,13 @@ class SalaryInfo(BaseModel):
             return round(amount, 2)
 
         return round(amount * multiplier[period_lower], 2)
+
+    @computed_field
+    @property
+    def salary_avg(self) -> Optional[float]:
+        if self.salary_from is not None and self.salary_to is not None:
+            return (self.salary_from + self.salary_to) / 2
+        return self.salary_from or self.salary_to
 
     @computed_field
     @property
@@ -96,43 +93,35 @@ class JobPosting(BaseModel):
 
 
 def transform_jobs(raw_data: dict) -> list[JobPosting]:
-    # Transform
     logger.info("Rozpoczeto transformacje i walidacje danych.")
 
     valid_postings = []
     raw_postings = raw_data.get("postings", [])
 
-    # Walidacja per rekord
     for raw_item in raw_postings:
         try:
             job_posting = JobPosting(**raw_item)
             valid_postings.append(job_posting)
-
+            
         except ValidationError as ve:
             job_url = raw_item.get("url", "Nieznany URL")
             logger.error(f"Blad walidacji danych dla ogloszenia {job_url}: {ve}")
-
+            
         except Exception as e:
             logger.error(f"Nieoczekiwany blad podczas przetwarzania rekordu: {e}")
 
     jobs_count = len(valid_postings)
-    logger.info(
-        f"Zwalidowano pomyslnie {jobs_count} z {len(raw_postings)} ofert pracy."
-    )
+    logger.info(f"Zwalidowano pomyslnie {jobs_count} z {len(raw_postings)} ofert pracy.")
 
-    # Zapis zwalidowanych danych do pliku JSON
     if jobs_count > 0:
         try:
             validated_json_data = [job.model_dump() for job in valid_postings]
             with open(config.VALIDATED_DATA_PATH, "w", encoding="utf-8") as f:
                 json.dump(validated_json_data, f, ensure_ascii=False, indent=4)
-            logger.info(
-                f"Zapisano zwalidowane dane do pliku: {config.VALIDATED_DATA_PATH}"
-            )
+            logger.info(f"Zapisano zwalidowane dane do pliku: {config.VALIDATED_DATA_PATH}")
+            
         except Exception as e:
-            logger.error(
-                f"Nieoczekiwany blad podczas zapisywania zwalidowanych danych: {e}"
-            )
+            logger.error(f"Nieoczekiwany blad podczas zapisywania zwalidowanych danych: {e}")
             raise
 
     return valid_postings

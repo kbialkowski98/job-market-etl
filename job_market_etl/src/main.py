@@ -5,7 +5,6 @@ from src.etl.load import load_jobs
 from src.etl.transform import transform_jobs
 from src.utils.logger_setup import setup_logger
 
-# Konfiguracja logowania
 setup_logger()
 logger = logging.getLogger(__name__)
 
