@@ -5,7 +5,9 @@ from typing import Optional
 from pydantic import BaseModel, Field, ValidationError, computed_field
 
 from src import config
+from src.utils.file_io import save_json
 from src.utils.logger_setup import setup_logger
+
 
 setup_logger()
 logger = logging.getLogger(__name__)
@@ -112,16 +114,5 @@ def transform_jobs(raw_data: dict) -> list[JobPosting]:
 
     jobs_count = len(valid_postings)
     logger.info(f"Zwalidowano pomyslnie {jobs_count} z {len(raw_postings)} ofert pracy.")
-
-    if jobs_count > 0:
-        try:
-            validated_json_data = [job.model_dump() for job in valid_postings]
-            with open(config.VALIDATED_DATA_PATH, "w", encoding="utf-8") as f:
-                json.dump(validated_json_data, f, ensure_ascii=False, indent=4)
-            logger.info(f"Zapisano zwalidowane dane do pliku: {config.VALIDATED_DATA_PATH}")
-            
-        except Exception as e:
-            logger.error(f"Nieoczekiwany blad podczas zapisywania zwalidowanych danych: {e}")
-            raise
 
     return valid_postings

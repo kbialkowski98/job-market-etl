@@ -17,3 +17,7 @@ def setup_logger():
             logging.StreamHandler(),
         ],
     )
+    
+    logging.getLogger("azure").setLevel(logging.WARNING)
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+

@@ -6,7 +6,9 @@ import time
 import requests
 
 from src import config
+from src.utils.file_io import save_json
 from src.utils.logger_setup import setup_logger
+
 
 setup_logger()
 logger = logging.getLogger(__name__)
@@ -87,15 +89,5 @@ def extract_jobs() -> dict:
         time.sleep(config.REQUEST_DELAY_SECONDS)
 
     result = {"postings": all_postings}
-
-    # Zapis pobranych danych na dysk
-    try:
-        os.makedirs(config.DATA_DIR, exist_ok=True)
-        with open(config.RAW_DATA_PATH, "w", encoding="utf-8") as f:
-            json.dump(result, f, ensure_ascii=False, indent=4)
-        logger.info(f"Zapisano surowe dane do pliku: {config.RAW_DATA_PATH}")
-    except OSError as e:
-        logger.error(f"Blad zapisu pliku: {e}")
-        raise
 
     return result
