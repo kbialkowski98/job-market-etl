@@ -1,11 +1,9 @@
-import json
 import logging
 from typing import Optional
 
 from pydantic import BaseModel, Field, ValidationError, computed_field
 
 from src import config
-from src.utils.file_io import save_json
 from src.utils.logger_setup import setup_logger
 
 
