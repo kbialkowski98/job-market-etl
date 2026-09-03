@@ -47,6 +47,9 @@ def load_jobs(jobs_list: list[JobPosting], db_url: str = config.DB_URL) -> None:
         logger.info("Brak danych do zaladowania.")
         return
 
+    if db_url is None:
+        raise ValueError("Brak konfiguracji polaczenia z baza danych (DB_USER/DB_PASSWORD).")
+
     engine = create_engine(db_url, echo=False)
     logger.info("Rozpoczeto ladowanie danych do bazy.")
 

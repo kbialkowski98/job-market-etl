@@ -1,12 +1,10 @@
 import json
 import logging
-import os
 import time
 
 import requests
 
 from src import config
-from src.utils.file_io import save_json
 from src.utils.logger_setup import setup_logger
 
 

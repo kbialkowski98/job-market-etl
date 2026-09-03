@@ -1,6 +1,8 @@
 import os
 from dotenv import load_dotenv
 
+from sqlalchemy.engine import URL
+
 # Wczytanie zmiennych środowiskowych
 load_dotenv()
 
@@ -14,11 +16,25 @@ VALIDATED_DATA_PATH = f"{DATA_DIR}/validated_jobs.json"
 LOG_FILE_PATH = f"{LOG_DIR}/job_market_etl.log"
 
 
-# KONFIGURACJA BAZY DANYCH
-DB_URL = f"sqlite:///{DATA_DIR}/jobs.db"
-DB_HOST = os.getenv("DB_HOST", "localhost")
+# KONFIGURACJA BAZ DANYCH
+DB_DRIVER = os.getenv("DB_DRIVER")
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DB_NAME")
+
+if DB_USER and DB_PASSWORD:
+    DB_URL = URL.create(
+        drivername=DB_DRIVER,
+        username=DB_USER,
+        password=DB_PASSWORD,
+        host=DB_HOST,
+        port=DB_PORT,
+        database=DB_NAME
+    )
+else:
+    DB_URL = None
 
 
 # KONFIGURACJA API
@@ -39,9 +55,6 @@ BASE_BACKOFF_SECONDS = 2
 AZURE_CONNECTION_STRING = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
 AZURE_RAW_CONTAINER = "raw-data"
 AZURE_TRANSFORMED_CONTAINER = "transformed-data"
-
-# KONFIGURACJA BAZ DANYCH
-DB_URL = os.getenv("DB_URL")
 
 
 # FEATURE TOGGLES
