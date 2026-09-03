@@ -1,5 +1,4 @@
-3. Zmiana na bulk insert
-4. Load do chmury
-5. Stworzenie .env.example
-6. Retry extract.py
-7. Naprawa walidacja per rekord
+1. Stworzenie .env.example
+2. Uzupelnienie README
+3. testy
+4. warstwa analityczna
