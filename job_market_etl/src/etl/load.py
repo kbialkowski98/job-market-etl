@@ -2,7 +2,7 @@ import logging
 from typing import Optional
 
 from sqlalchemy import Boolean, Float, String, create_engine
-from sqlalchemy.dialects.sqlite import insert
+from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
 from src import config
