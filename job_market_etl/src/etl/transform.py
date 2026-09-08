@@ -68,6 +68,8 @@ class TilesValues(BaseModel):
 class TilesInfo(BaseModel):
     values: list[TilesValues] = []
 
+class LocationInfo(BaseModel):
+    fullyRemote: Optional[bool] = False
 
 class JobPosting(BaseModel):
     id: str
@@ -75,9 +77,16 @@ class JobPosting(BaseModel):
     title: str
     url: str
     salary: Optional[SalaryInfo] = None
-    fullyRemote: Optional[bool] = None
     seniority: Optional[list[str]] = None
     tiles: Optional[TilesInfo] = None
+    location: Optional[LocationInfo] = None
+
+    @computed_field
+    @property
+    def fullyRemote(self) -> bool:
+        if self.location and self.location.fullyRemote is not None:
+            return self.location.fullyRemote
+        return False
 
     @computed_field
     @property
