@@ -1,16 +1,16 @@
-data/
-logs/
+.env
+.vscode/
+
+__pycache__/
+*.pyc
+.venv/
+venv/
 
 *.db
 *.sqlite3
 
-__pycache__/
-*.pyc
-.env
-.venv/
-venv/
-**/.vscode/settings.json
-settings.json
+data/
+logs/
 
 dbt_transform/target/
 dbt_transform/dbt_packages/
