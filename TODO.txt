@@ -2,3 +2,4 @@
 2. Uzupelnienie README
 3. testy
 4. warstwa analityczna
+5. tabele analityczne
