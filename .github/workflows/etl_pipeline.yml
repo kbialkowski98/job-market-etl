@@ -10,6 +10,15 @@ jobs:
   run-etl:
     runs-on: ubuntu-latest
 
+    env:
+      DB_DRIVER: ${{ secrets.DB_DRIVER }}
+      DB_USER: ${{ secrets.DB_USER }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      DB_HOST: ${{ secrets.DB_HOST }}
+      DB_PORT: ${{ secrets.DB_PORT }}
+      DB_NAME: ${{ secrets.DB_NAME }}
+      AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+
     defaults:
       run:
         working-directory: ./job_market_etl
@@ -29,16 +38,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install psycopg2-binary
+          pip install dbt-postgres
 
-      - name: Uruchomienie ETL
-        env:
-          # Hasła z sejfu GitHub Actions
-          DB_DRIVER: ${{ secrets.DB_DRIVER }}
-          DB_USER: ${{ secrets.DB_USER }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_HOST: ${{ secrets.DB_HOST }}
-          DB_PORT: ${{ secrets.DB_PORT }}
-          DB_NAME: ${{ secrets.DB_NAME }}
-          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+      - name: Uruchomienie ETL (Pobieranie i Ładowanie)
         run: |
           python -m src.main
+
+      - name: Uruchomienie Transformacji (dbt)
+        working-directory: ./dbt_transform
+        run: |
+          dbt run --profiles-dir .
