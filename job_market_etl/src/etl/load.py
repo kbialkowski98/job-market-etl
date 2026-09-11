@@ -40,6 +40,8 @@ class Job(Base):
     fully_remote: Mapped[Optional[bool]] = mapped_column(Boolean, nullable=True)
     seniority: Mapped[Optional[str]] = mapped_column(String, nullable=True)
     technologies: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    published_at: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    
 
 
 def load_jobs(jobs_list: list[JobPosting], db_url: str = config.DB_URL) -> None:
@@ -56,13 +58,13 @@ def load_jobs(jobs_list: list[JobPosting], db_url: str = config.DB_URL) -> None:
     Base.metadata.create_all(engine)
     logger.info("Schemat bazy danych zweryfikowany.")
 
-    values_to_insert = []
+    values_to_insert = {}
 
     for item in jobs_list:
         seniority_str = ", ".join(item.seniority) if item.seniority else None
         technologies_str = ", ".join(item.technologies) if item.technologies else None
 
-        values_to_insert.append({
+        values_to_insert[item.id] = {
             "id": item.id,
             "name": item.name,
             "title": item.title,
@@ -82,10 +84,13 @@ def load_jobs(jobs_list: list[JobPosting], db_url: str = config.DB_URL) -> None:
             "fully_remote": item.fullyRemote,
             "seniority": seniority_str,
             "technologies": technologies_str,
-        })
+            "published_at": item.published_at,
+        }
+
+    unique_values_to_insert = list(values_to_insert.values())
 
     # Przygotowanie transakcji Bulk Upsert
-    stmt = insert(Job).values(values_to_insert)
+    stmt = insert(Job).values(unique_values_to_insert)
     update_dict = {c.name: c for c in stmt.excluded if c.name != "id"}
     do_update_stmt = stmt.on_conflict_do_update(
         index_elements=["id"],
@@ -97,7 +102,7 @@ def load_jobs(jobs_list: list[JobPosting], db_url: str = config.DB_URL) -> None:
         try:
             session.execute(do_update_stmt)
             session.commit()
-            logger.info(f"Zaladowano/zaktualizowano {len(values_to_insert)} rekordow.")
+            logger.info(f"Zaladowano/zaktualizowano {len(unique_values_to_insert)} rekordow.")
             
         except Exception as e:
             logger.error(f"Blad podczas ladowania danych: {e}")

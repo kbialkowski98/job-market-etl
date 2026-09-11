@@ -1,5 +1,6 @@
 import logging
 from typing import Optional
+from datetime import datetime
 
 from pydantic import BaseModel, Field, ValidationError, computed_field
 
@@ -80,6 +81,14 @@ class JobPosting(BaseModel):
     seniority: Optional[list[str]] = None
     tiles: Optional[TilesInfo] = None
     location: Optional[LocationInfo] = None
+    posted: Optional[int] = None
+
+    @computed_field
+    @property
+    def published_at(self) -> Optional[str]:
+        if self.posted:
+            return datetime.fromtimestamp(self.posted / 1000.0).strftime('%Y-%m-%d')
+        return None
 
     @computed_field
     @property
