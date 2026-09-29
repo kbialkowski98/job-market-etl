@@ -2,7 +2,7 @@ import logging
 from typing import Optional
 from datetime import date
 
-from sqlalchemy import Boolean, Date, Float, String, create_engine
+from sqlalchemy import Boolean, Date, Float, String, create_engine, delete
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
@@ -40,7 +40,6 @@ class Job(Base):
 
     fully_remote: Mapped[Optional[bool]] = mapped_column(Boolean, nullable=True)
     seniority: Mapped[Optional[str]] = mapped_column(String, nullable=True)
-    technologies: Mapped[Optional[str]] = mapped_column(String, nullable=True)
     published_at: Mapped[Optional[str]] = mapped_column(String, nullable=True)
 
 
@@ -66,10 +65,17 @@ class JobObservations(Base):
 
     fully_remote: Mapped[Optional[bool]] = mapped_column(Boolean, nullable=True)
     seniority: Mapped[Optional[str]] = mapped_column(String, nullable=True)
-    technologies: Mapped[Optional[str]] = mapped_column(String, nullable=True)
     published_at: Mapped[Optional[str]] = mapped_column(String, nullable=True)
 
     scraped_at: Mapped[date] = mapped_column(Date, nullable=False, primary_key=True)
+
+
+class JobObservationSkills(Base):
+    __tablename__ = "job_observation_skills"
+
+    job_id: Mapped[str] = mapped_column(String, primary_key=True, nullable=False)
+    scraped_at: Mapped[date] = mapped_column(Date, primary_key=True, nullable=False)
+    skill: Mapped[str] = mapped_column(String, primary_key=True, nullable=False)
     
 
 
@@ -90,10 +96,10 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
     logger.info("Schemat bazy danych zweryfikowany.")
 
     values_to_insert = {}
+    skill_rows_by_key = {}
 
     for item in jobs_list:
         seniority_str = ", ".join(item.seniority) if item.seniority else None
-        technologies_str = ", ".join(item.technologies) if item.technologies else None
 
         values_to_insert[item.id] = {
             "id": item.id,
@@ -114,11 +120,21 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
             
             "fully_remote": item.fullyRemote,
             "seniority": seniority_str,
-            "technologies": technologies_str,
             "published_at": item.published_at,
             
             "scraped_at": scraped_at
         }
+
+        for raw_skill in item.technologies:
+            skill = raw_skill.strip().lower()
+            if not skill:
+                continue
+            skill_rows_by_key[(item.id, scraped_at, skill)] = {
+                "job_id": item.id,
+                "scraped_at": scraped_at,
+                "skill": skill
+            }
+
 
     observation_rows = list(values_to_insert.values())
     obs_stmt = insert(JobObservations).values(observation_rows)
@@ -136,15 +152,32 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
         index_elements=["id"],
         set_=job_update,
     )
+
+
+    skill_rows = list(skill_rows_by_key.values())
+    job_ids = list(values_to_insert.keys())
+
     
     Session = sessionmaker(bind=engine)
     with Session() as session:
         try:
             session.execute(obs_upsert)
             session.execute(job_upsert)
+
+            session.execute(
+                delete(JobObservationSkills).where(
+                    JobObservationSkills.scraped_at == scraped_at,
+                    JobObservationSkills.job_id.in_(job_ids)
+                )
+            )
+            if skill_rows:
+                session.execute(insert(JobObservationSkills).values(skill_rows))
+
             session.commit()
+
             logger.info(f"[job_observations] Załadowano/zaktualizowano {len(observation_rows)} rekordow.")
             logger.info(f"[jobs] Załadowano/zaktualizowano {len(job_rows)} rekordow.")
+            logger.info(f"[job_skills] Załadowano/zaktualizowano {len(skill_rows)} rekordow.")
 
         except Exception as e:
             session.rollback()
