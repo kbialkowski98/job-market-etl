@@ -14,7 +14,8 @@ logger = logging.getLogger(__name__)
 
 def run_etl():
     logger.info("Rozpoczecie procesu ETL.")
-    today_str = datetime.date.today().strftime("%Y-%m-%d")
+    today = datetime.date.today()
+    today_str = today.strftime("%Y-%m-%d")
 
     try:
         # --- ETAP 1: EXTRACT ---
@@ -41,7 +42,7 @@ def run_etl():
         # --- ETAP 3: LOAD ---
         logger.info("Etap 3: Zapis do bazy (Load).")
         if config.SAVE_TO_DATABASE:
-            load_jobs(clean_data)
+            load_jobs(clean_data, today)
 
         logger.info("Proces ETL zakonczony pomyslnie.")
 
