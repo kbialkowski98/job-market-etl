@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 def upload_to_blob(file_path: str, container_name: str, blob_name: str) -> None:
     if not config.AZURE_CONNECTION_STRING:
         logger.error("Brak klucza AZURE_CONNECTION_STRING w pliku .env.")
-        return
+        raise ValueError("Brak klucza AZURE_CONNECTION_STRING w pliku .env.")
 
     try:
         blob_service_client = BlobServiceClient.from_connection_string(config.AZURE_CONNECTION_STRING)

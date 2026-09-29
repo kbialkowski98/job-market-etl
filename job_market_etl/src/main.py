@@ -15,7 +15,6 @@ logger = logging.getLogger(__name__)
 def run_etl():
     logger.info("Rozpoczecie procesu ETL.")
     today = datetime.date.today()
-    today_str = today.strftime("%Y-%m-%d")
 
     try:
         # --- ETAP 1: EXTRACT ---
@@ -26,7 +25,7 @@ def run_etl():
             save_json(raw_data, config.RAW_DATA_PATH)
 
         if config.SAVE_JSON_CLOUD:
-            upload_to_blob(config.RAW_DATA_PATH, config.AZURE_RAW_CONTAINER, f"raw_jobs_{today_str}.json")
+            upload_to_blob(config.RAW_DATA_PATH, config.AZURE_RAW_CONTAINER, f"raw/{today.year}/{today.month:02d}/{today.day:02d}/jobs.json")
 
         # --- ETAP 2: TRANSFORM ---
         logger.info("Etap 2: Transformacja i walidacja (Transform).")
@@ -37,7 +36,7 @@ def run_etl():
             save_json(clean_data_save, config.VALIDATED_DATA_PATH)
 
         if config.SAVE_JSON_CLOUD:
-            upload_to_blob(config.VALIDATED_DATA_PATH, config.AZURE_TRANSFORMED_CONTAINER, f"validated_jobs_{today_str}.json")
+            upload_to_blob(config.VALIDATED_DATA_PATH, config.AZURE_TRANSFORMED_CONTAINER, f"validated/{today.year}/{today.month:02d}/{today.day:02d}/jobs.json")
 
         # --- ETAP 3: LOAD ---
         logger.info("Etap 3: Zapis do bazy (Load).")
