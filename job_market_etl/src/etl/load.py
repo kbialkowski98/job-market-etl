@@ -9,6 +9,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 from src import config
 from src.etl.transform import JobPosting
 from src.utils.logger_setup import setup_logger
+from src.utils.fx import build_fx_rows
 
 setup_logger()
 logger = logging.getLogger(__name__)
@@ -76,7 +77,16 @@ class JobObservationSkills(Base):
     job_id: Mapped[str] = mapped_column(String, primary_key=True, nullable=False)
     scraped_at: Mapped[date] = mapped_column(Date, primary_key=True, nullable=False)
     skill: Mapped[str] = mapped_column(String, primary_key=True, nullable=False)
-    
+
+
+class FxRate(Base):
+    __tablename__ = "fx_rates"
+
+    rate_date: Mapped[date] = mapped_column(Date, primary_key=True, nullable=False)
+    currency: Mapped[str] = mapped_column(String, primary_key=True, nullable=False)
+    rate_pln: Mapped[float] = mapped_column(Float, nullable=False)
+    effective_date: Mapped[date] = mapped_column(Date, nullable=False)
+    source: Mapped[str] = mapped_column(String, nullable=False)
 
 
 def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = config.DB_URL) -> None:
@@ -97,6 +107,7 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
 
     values_to_insert = {}
     skill_rows_by_key = {}
+    currencies = set()
 
     for item in jobs_list:
         seniority_str = ", ".join(item.seniority) if item.seniority else None
@@ -107,7 +118,6 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
             "title": item.title,
             "offer_url": item.offer_url,
             
-            # Bezpieczne sprawdzanie zagnieżdżonego obiektu salary
             "salary_from": item.salary.salary_from if item.salary else None,
             "salary_to": item.salary.salary_to if item.salary else None,
             "salary_avg": item.salary.salary_avg if item.salary else None,
@@ -135,6 +145,9 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
                 "skill": skill
             }
 
+        if item.salary and item.salary.currency:
+            currencies.add(item.salary.currency.strip().upper())
+
 
     observation_rows = list(values_to_insert.values())
     obs_stmt = insert(JobObservations).values(observation_rows)
@@ -155,6 +168,11 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
 
 
     skill_rows = list(skill_rows_by_key.values())
+
+    logger.info(f"Waluty w zrzucie: {sorted(currencies)}")
+    fx_rows = build_fx_rows(currencies, scraped_at)
+    logger.info(f"Kursy: {fx_rows}")
+
     job_ids = list(values_to_insert.keys())
 
     
@@ -173,11 +191,25 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
             if skill_rows:
                 session.execute(insert(JobObservationSkills).values(skill_rows))
 
+            if fx_rows:
+                fx_stmt = insert(FxRate).values(fx_rows)
+                fx_update = {
+                    c.name: c
+                    for c in fx_stmt.excluded
+                    if c.name not in ("rate_date", "currency")
+                }
+                fx_upsert = fx_stmt.on_conflict_do_update(
+                    index_elements=["rate_date", "currency"],
+                    set_=fx_update,
+                )
+                session.execute(fx_upsert)
+
             session.commit()
 
             logger.info(f"[job_observations] Załadowano/zaktualizowano {len(observation_rows)} rekordow.")
             logger.info(f"[jobs] Załadowano/zaktualizowano {len(job_rows)} rekordow.")
             logger.info(f"[job_skills] Załadowano/zaktualizowano {len(skill_rows)} rekordow.")
+            logger.info(f"[fx_rates] Załadowano/zaktualizowano {len(fx_rows)} rekordow.")
 
         except Exception as e:
             session.rollback()
