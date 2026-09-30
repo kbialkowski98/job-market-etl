@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: fct_market_daily
+    columns:
+      - name: scraped_at
+        tests:
+          - unique
+          - not_null
+      - name: total_jobs
+        tests:
+          - not_null

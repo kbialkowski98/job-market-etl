@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: job_market
+    schema: public
+    tables:
+      - name: jobs
+      - name: job_observations
+      - name: job_observation_skills
+      - name: fx_rates

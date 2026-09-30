@@ -44,7 +44,8 @@ jobs:
         run: |
           python -m src.main
 
-      - name: Uruchomienie Transformacji (dbt)
+      - name: Uruchomienie dbt (seed, modele, testy)
         working-directory: ./dbt_transform
         run: |
-          dbt run --profiles-dir .
+          dbt build --profiles-dir .
+
