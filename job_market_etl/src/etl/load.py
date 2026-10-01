@@ -1,6 +1,6 @@
 import logging
-from typing import Optional
 from datetime import date, timedelta
+from typing import Optional
 
 from sqlalchemy import Boolean, Date, Float, String, create_engine, delete, func, select
 from sqlalchemy.dialects.postgresql import insert
@@ -8,8 +8,9 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
 from src import config
 from src.etl.transform import JobPosting
-from src.utils.logger_setup import setup_logger
 from src.utils.fx import build_fx_rows
+from src.utils.logger_setup import setup_logger
+
 
 setup_logger()
 logger = logging.getLogger(__name__)
@@ -90,7 +91,8 @@ class FxRate(Base):
 
 
 def _is_volume_drop(today_count: int, yesterday_count: int | None, threshold: float = 0.4) -> bool:
-    if yesterday_count == 0 or yesterday_count is None:
+    # Brak wczorajszego zrzutu albo zero ofert: nie ma z czym porownac.
+    if yesterday_count is None or yesterday_count == 0:
         return False
     return (yesterday_count - today_count) / yesterday_count >= threshold
 
@@ -119,7 +121,6 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
             "name": item.name,
             "title": item.title,
             "offer_url": item.offer_url,
-            
             "salary_from": item.salary.salary_from if item.salary else None,
             "salary_to": item.salary.salary_to if item.salary else None,
             "salary_avg": item.salary.salary_avg if item.salary else None,
@@ -129,12 +130,10 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
             "salary_period": item.salary.period if item.salary else None,
             "salary_type": item.salary.type if item.salary else None,
             "salary_currency": item.salary.currency if item.salary else None,
-            
             "fully_remote": item.fullyRemote,
             "seniority": seniority_str,
             "published_at": item.published_at,
-            
-            "scraped_at": scraped_at
+            "scraped_at": scraped_at,
         }
 
         for raw_skill in item.technologies:
@@ -144,34 +143,40 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
             skill_rows_by_key[(item.id, scraped_at, skill)] = {
                 "job_id": item.id,
                 "scraped_at": scraped_at,
-                "skill": skill
+                "skill": skill,
             }
 
         if item.salary and item.salary.currency:
             currencies.add(item.salary.currency.strip().upper())
 
-
     skill_rows = list(skill_rows_by_key.values())
 
     logger.info(f"Waluty w zrzucie: {sorted(currencies)}")
+    # Kursy przed transakcja: blad NBP nie zostawia otwartej sesji.
     fx_rows = build_fx_rows(currencies, scraped_at)
     logger.info(f"Kursy: {fx_rows}")
 
     job_ids = list(values_to_insert.keys())
-
     observation_rows = list(values_to_insert.values())
-    
+
     Session = sessionmaker(bind=engine)
     with Session() as session:
         try:
+            # Prog wolumenu przed budowa INSERT-ow. Pusty .values([]) rzuca wyjatek.
             yesterday = scraped_at - timedelta(days=1)
             yesterday_count = session.scalar(
-                select(func.count()).select_from(JobObservations).where(JobObservations.scraped_at == yesterday)
+                select(func.count())
+                .select_from(JobObservations)
+                .where(JobObservations.scraped_at == yesterday)
             )
             today_count = len(observation_rows)
             if _is_volume_drop(today_count, yesterday_count):
-                logger.warning(f"Spadek liczby rekordow w stosunku do dnia poprzedniego: {yesterday_count} -> {today_count}")
-                raise RuntimeError(f"Spadek liczby rekordow w stosunku do dnia poprzedniego: {yesterday_count} -> {today_count}")
+                message = (
+                    "Spadek liczby rekordow w stosunku do dnia poprzedniego: "
+                    f"{yesterday_count} -> {today_count}"
+                )
+                logger.warning(message)
+                raise RuntimeError(message)
 
             if not observation_rows:
                 return
@@ -179,27 +184,30 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
             obs_stmt = insert(JobObservations).values(observation_rows)
             obs_update = {c.name: c for c in obs_stmt.excluded if c.name not in ("id", "scraped_at")}
             obs_upsert = obs_stmt.on_conflict_do_update(
-            index_elements=["id", "scraped_at"],
-            set_=obs_update,
+                index_elements=["id", "scraped_at"],
+                set_=obs_update,
             )
 
-
-            job_rows = [{key: value for key, value in row.items() if key != "scraped_at"} for row in observation_rows]
+            job_rows = [
+                {key: value for key, value in row.items() if key != "scraped_at"}
+                for row in observation_rows
+            ]
             job_stmt = insert(Job).values(job_rows)
             job_update = {c.name: c for c in job_stmt.excluded if c.name != "id"}
             job_upsert = job_stmt.on_conflict_do_update(
-            index_elements=["id"],
-            set_=job_update,
+                index_elements=["id"],
+                set_=job_update,
             )
-
 
             session.execute(obs_upsert)
             session.execute(job_upsert)
 
+            # Skille moga zniknac z oferty: dzisiejsze wiersze ofert z paczki
+            # kasujemy i wstawiamy aktualna liste. Inne daty zostaja.
             session.execute(
                 delete(JobObservationSkills).where(
                     JobObservationSkills.scraped_at == scraped_at,
-                    JobObservationSkills.job_id.in_(job_ids)
+                    JobObservationSkills.job_id.in_(job_ids),
                 )
             )
             if skill_rows:
@@ -218,16 +226,15 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
                 )
                 session.execute(fx_upsert)
 
+            # Jeden commit: obserwacje, oferty, skille i kursy albo nic.
             session.commit()
 
-            logger.info(f"[job_observations] Załadowano/zaktualizowano {len(observation_rows)} rekordow.")
-            logger.info(f"[jobs] Załadowano/zaktualizowano {len(job_rows)} rekordow.")
-            logger.info(f"[job_skills] Załadowano/zaktualizowano {len(skill_rows)} rekordow.")
-            logger.info(f"[fx_rates] Załadowano/zaktualizowano {len(fx_rows)} rekordow.")
+            logger.info(f"[job_observations] Zaladowano/zaktualizowano {len(observation_rows)} rekordow.")
+            logger.info(f"[jobs] Zaladowano/zaktualizowano {len(job_rows)} rekordow.")
+            logger.info(f"[job_skills] Zaladowano/zaktualizowano {len(skill_rows)} rekordow.")
+            logger.info(f"[fx_rates] Zaladowano/zaktualizowano {len(fx_rows)} rekordow.")
 
         except Exception as e:
             session.rollback()
             logger.error(f"Wystapil blad podczas ladowania danych: {e}")
             raise
-
-

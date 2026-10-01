@@ -1,5 +1,3 @@
-{{ config(materialized='view') }}
-
 {{ config(materialized='table') }}
 
 select
@@ -14,7 +12,5 @@ select
     round(avg(monthly_salary_pln) filter (where seniority = 'Senior')::numeric, 0) as avg_pln_senior,
     round(avg(monthly_salary_pln) filter (where seniority = 'Expert')::numeric, 0) as avg_pln_expert,
     round(avg(monthly_salary_pln) filter (where seniority = 'Lead')::numeric, 0) as avg_pln_lead
-from 
-    {{ ref('stg_job_observations') }}
-group by 
-    scraped_at
+from {{ ref('stg_job_observations') }}
+group by scraped_at

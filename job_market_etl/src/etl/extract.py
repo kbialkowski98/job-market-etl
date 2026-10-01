@@ -22,7 +22,7 @@ def extract_jobs() -> dict:
             "nfj-global-context": '{"region":"PL","lang":"pl","global_salary_match_enabled":true}',
         }
     )
-    
+
     logger.info("Zainicjalizowano sesje HTTP.")
     session.get(config.API_BASE_URL)
     logger.info("Pobrano ciasteczka z API.")
@@ -40,7 +40,7 @@ def extract_jobs() -> dict:
             "salaryCurrency": "original",
             "salaryPeriod": "original",
         }
-        
+
         payload = json.dumps(
             {
                 "criteriaSearch": {"category": ["data"]},
@@ -49,7 +49,7 @@ def extract_jobs() -> dict:
             }
         )
 
-        # Wykonanie zapytania z mechanizmem Retry
+        # Retry: MAX_RETRIES prob, odstep rosnie wykladniczo.
         for attempt in range(config.MAX_RETRIES):
             try:
                 response = session.post(config.API_POST_URL, params=params, data=payload)
@@ -70,10 +70,10 @@ def extract_jobs() -> dict:
                 logger.info(f"Czekam {sleep_time} sekund przed kolejna proba...")
                 time.sleep(sleep_time)
 
-        # Przetwarzanie poprawnej odpowiedzi
         page_json = response.json()
         postings = page_json.get("postings", [])
 
+        # Pusta strona albo krotka ostatnia strona konczy paginacje.
         if not postings:
             break
 
@@ -86,6 +86,4 @@ def extract_jobs() -> dict:
         page += 1
         time.sleep(config.REQUEST_DELAY_SECONDS)
 
-    result = {"postings": all_postings}
-
-    return result
+    return {"postings": all_postings}

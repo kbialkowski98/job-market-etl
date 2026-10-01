@@ -5,7 +5,6 @@ from src import config
 
 
 def setup_logger():
-    # Konfiguracja logowania
     os.makedirs(config.LOG_DIR, exist_ok=True)
 
     logging.basicConfig(
@@ -17,7 +16,7 @@ def setup_logger():
             logging.StreamHandler(),
         ],
     )
-    
+
+    # Azure i urllib3 loguja INFO przy kazdym zapytaniu.
     logging.getLogger("azure").setLevel(logging.WARNING)
     logging.getLogger("urllib3").setLevel(logging.WARNING)
-

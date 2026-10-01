@@ -2,9 +2,9 @@ name: Daily Job Market ETL
 
 on:
   schedule:
-    # Codziennie o 3:00 w nocy 
+    # Codziennie o 3:00 w nocy
     - cron: '0 3 * * *'
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   run-etl:

@@ -1,6 +1,6 @@
 import os
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 from sqlalchemy.engine import URL
 
 # Wczytanie zmiennych środowiskowych
@@ -31,7 +31,7 @@ if DB_USER and DB_PASSWORD:
         password=DB_PASSWORD,
         host=DB_HOST,
         port=DB_PORT,
-        database=DB_NAME
+        database=DB_NAME,
     )
 else:
     DB_URL = None
@@ -42,8 +42,11 @@ API_BASE_URL = "https://nofluffjobs.com/pl"
 API_POST_URL = "https://nofluffjobs.com/api/search/posting"
 
 
-# EXTRACT.PY
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+# PAGINACJA I RETRY
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+)
 API_PAGE_SIZE = 100
 REQUEST_DELAY_SECONDS = 1
 

@@ -1,6 +1,6 @@
 import logging
-from typing import Optional
 from datetime import datetime
+from typing import Optional
 
 from pydantic import BaseModel, Field, ValidationError, computed_field
 
@@ -13,6 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 class SalaryInfo(BaseModel):
+    # API zwraca klucz "from". W Pythonie from jest slowem zarezerwowanym.
     salary_from: Optional[float] = Field(default=None, alias="from")
     salary_to: Optional[float] = Field(default=None, alias="to")
     type: Optional[str] = None
@@ -23,6 +24,7 @@ class SalaryInfo(BaseModel):
         if amount is None or period is None:
             return amount
 
+        # Rok / 12, tydzien * 4.33, dzien * 21.67, godzina * 173.33.
         multiplier = {
             "month": 1.0,
             "year": 1 / 12,
@@ -69,8 +71,10 @@ class TilesValues(BaseModel):
 class TilesInfo(BaseModel):
     values: list[TilesValues] = []
 
+
 class LocationInfo(BaseModel):
     fullyRemote: Optional[bool] = False
+
 
 class JobPosting(BaseModel):
     id: str
@@ -87,7 +91,7 @@ class JobPosting(BaseModel):
     @property
     def published_at(self) -> Optional[str]:
         if self.posted:
-            return datetime.fromtimestamp(self.posted / 1000.0).strftime('%Y-%m-%d')
+            return datetime.fromtimestamp(self.posted / 1000.0).strftime("%Y-%m-%d")
         return None
 
     @computed_field
@@ -107,6 +111,7 @@ class JobPosting(BaseModel):
     def technologies(self) -> list[str]:
         if not self.tiles:
             return []
+        # Tylko kafle requirement. Benefity i inne typy nie sa skillami.
         return [t.value for t in self.tiles.values if t.type == "requirement"]
 
 
@@ -120,11 +125,9 @@ def transform_jobs(raw_data: dict) -> list[JobPosting]:
         try:
             job_posting = JobPosting(**raw_item)
             valid_postings.append(job_posting)
-            
         except ValidationError as ve:
             job_url = raw_item.get("url", "Nieznany URL")
             logger.error(f"Blad walidacji danych dla ogloszenia {job_url}: {ve}")
-            
         except Exception as e:
             logger.error(f"Nieoczekiwany blad podczas przetwarzania rekordu: {e}")
 
