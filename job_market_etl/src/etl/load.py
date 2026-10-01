@@ -1,8 +1,8 @@
 import logging
 from typing import Optional
-from datetime import date
+from datetime import date, timedelta
 
-from sqlalchemy import Boolean, Date, Float, String, create_engine, delete
+from sqlalchemy import Boolean, Date, Float, String, create_engine, delete, func, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
@@ -89,11 +89,13 @@ class FxRate(Base):
     source: Mapped[str] = mapped_column(String, nullable=False)
 
 
-def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = config.DB_URL) -> None:
-    if not jobs_list:
-        logger.info("Brak danych do zaladowania.")
-        return
+def _is_volume_drop(today_count: int, yesterday_count: int | None, threshold: float = 0.4) -> bool:
+    if yesterday_count == 0 or yesterday_count is None:
+        return False
+    return (yesterday_count - today_count) / yesterday_count >= threshold
 
+
+def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = config.DB_URL) -> None:
     if db_url is None:
         raise ValueError("Brak konfiguracji polaczenia z baza danych (DB_USER/DB_PASSWORD).")
 
@@ -149,24 +151,6 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
             currencies.add(item.salary.currency.strip().upper())
 
 
-    observation_rows = list(values_to_insert.values())
-    obs_stmt = insert(JobObservations).values(observation_rows)
-    obs_update = {c.name: c for c in obs_stmt.excluded if c.name not in ("id", "scraped_at")}
-    obs_upsert = obs_stmt.on_conflict_do_update(
-        index_elements=["id", "scraped_at"],
-        set_=obs_update,
-    )
-
-
-    job_rows = [{key: value for key, value in row.items() if key != "scraped_at"} for row in observation_rows]
-    job_stmt = insert(Job).values(job_rows)
-    job_update = {c.name: c for c in job_stmt.excluded if c.name != "id"}
-    job_upsert = job_stmt.on_conflict_do_update(
-        index_elements=["id"],
-        set_=job_update,
-    )
-
-
     skill_rows = list(skill_rows_by_key.values())
 
     logger.info(f"Waluty w zrzucie: {sorted(currencies)}")
@@ -175,10 +159,40 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
 
     job_ids = list(values_to_insert.keys())
 
+    observation_rows = list(values_to_insert.values())
     
     Session = sessionmaker(bind=engine)
     with Session() as session:
         try:
+            yesterday = scraped_at - timedelta(days=1)
+            yesterday_count = session.scalar(
+                select(func.count()).select_from(JobObservations).where(JobObservations.scraped_at == yesterday)
+            )
+            today_count = len(observation_rows)
+            if _is_volume_drop(today_count, yesterday_count):
+                logger.warning(f"Spadek liczby rekordow w stosunku do dnia poprzedniego: {yesterday_count} -> {today_count}")
+                raise RuntimeError(f"Spadek liczby rekordow w stosunku do dnia poprzedniego: {yesterday_count} -> {today_count}")
+
+            if not observation_rows:
+                return
+
+            obs_stmt = insert(JobObservations).values(observation_rows)
+            obs_update = {c.name: c for c in obs_stmt.excluded if c.name not in ("id", "scraped_at")}
+            obs_upsert = obs_stmt.on_conflict_do_update(
+            index_elements=["id", "scraped_at"],
+            set_=obs_update,
+            )
+
+
+            job_rows = [{key: value for key, value in row.items() if key != "scraped_at"} for row in observation_rows]
+            job_stmt = insert(Job).values(job_rows)
+            job_update = {c.name: c for c in job_stmt.excluded if c.name != "id"}
+            job_upsert = job_stmt.on_conflict_do_update(
+            index_elements=["id"],
+            set_=job_update,
+            )
+
+
             session.execute(obs_upsert)
             session.execute(job_upsert)
 
@@ -215,3 +229,5 @@ def load_jobs(jobs_list: list[JobPosting], scraped_at: date, db_url: str = confi
             session.rollback()
             logger.error(f"Wystapil blad podczas ladowania danych: {e}")
             raise
+
+
