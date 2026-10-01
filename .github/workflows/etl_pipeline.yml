@@ -40,6 +40,10 @@ jobs:
           pip install psycopg2-binary
           pip install dbt-postgres
 
+      - name: Uruchomienie testów
+        run: |
+          python -m pytest tests/test_salary.py -q
+
       - name: Uruchomienie ETL (Pobieranie i Ładowanie)
         run: |
           python -m src.main
