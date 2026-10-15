@@ -1,15 +1,15 @@
-# Rynek pracy data — dzienne ETL
+# Dzienny ETL ofert pracy
 
-Codzienny zrzut ofert z kategorii `data` na [NoFluffJobs](https://nofluffjobs.com/pl). Python pobiera, waliduje i ładuje historię do Postgresa oraz surowe pliki do Azure Blob. dbt buduje z tego dzienne zestawienia rynku i skilli.
+Projekt monitoruje rynek pracy w kategorii data na NoFluffJobs (liczba ogłoszeń, udział pracy zdalnej, widełki płacowe wg doświadczenia i popularność technologii).
 
-Oferta, która zniknęła z API, zostaje w historii. Drugi przebieg tego samego dnia aktualizuje wiersz z tej daty i nie rusza poprzednich dni.
+Python pobiera dane z API, waliduje je i ładuje historię do PostgreSQL oraz kopie JSON do Azure Blob Storage. Następnie dbt generuje dzienne modele analityczne. Całość jest idempotentna - ponowne uruchomienie w tym samym dniu aktualizuje bieżący rekord, nie naruszając historii, a usunięte z portalu oferty pozostają w bazie.
 
 ## Przebieg
 
-1. **Extract.** Paginacja API, trzy próby, odstęp rośnie wykładniczo.
-2. **Transform.** Pydantic odrzuca rekord bez tytułu i idzie dalej. Pensja roczna, tygodniowa, dzienna i godzinowa schodzi na miesiąc. Z kafelków zostają tylko wymagania (`requirement`), zapisane małymi literami.
-3. **Load.** Jedna transakcja: aktualny stan oferty, obserwacja dnia, skille tego dnia i kursy. Spadek liczby ofert o co najmniej 40% względem wczoraj przerywa zapis, zanim powstanie `INSERT`.
-4. **dbt.** Staging liczy pensję w PLN i podmienia synonimy skilli. Marty agregują dzień.
+1. **Extract.** Paginacja API z mechanizmem ponawiania.
+2. **Transform.** Walidacja Pydantic (odrzucenie rekordów bez tytułu), normalizacja stawek (rocznych, tygodniowych, dziennych i godzinowych) do kwoty miesięcznej oraz ekstrakcja wymagań technicznych.
+3. **Load.** Jedna transakcja: aktualny stan oferty, obserwacja dnia, wymagania tego dnia i kursy NBP. Spadek liczby ofert o co najmniej 40% względem wczoraj przerywa zapis, zanim cokolwiek wejdzie do bazy.
+4. **dbt.** Przeliczenie stawek na PLN, standaryzacja synonimów skilli i budowa zagregowanych martów.
 
 Surowy JSON i wersja po walidacji lądują w Azure jako `raw/RRRR/MM/DD/jobs.json` i `validated/RRRR/MM/DD/jobs.json`. Przełączniki `SAVE_JSON_LOCAL`, `SAVE_JSON_CLOUD` i `SAVE_TO_DATABASE` są w `job_market_etl/src/config.py`.
 
@@ -17,21 +17,33 @@ Surowy JSON i wersja po walidacji lądują w Azure jako `raw/RRRR/MM/DD/jobs.jso
 
 Wszystko w schemacie `public`. Python tworzy brakujące tabele przez `create_all`. To nie zmienia kolumn, które już istnieją.
 
-| Tabela | Ziarno | Znaczenie |
+| Tabela | Klucz główny | Znaczenie |
 | --- | --- | --- |
 | `jobs` | `id` | Ostatni znany stan oferty |
 | `job_observations` | `id`, `scraped_at` | Oferta tak, jak wyglądała danego dnia |
-| `job_observation_skills` | `job_id`, `scraped_at`, `skill` | Skille oferty w tym dniu. Lista może się skurczyć, więc dzisiejsze wiersze ofert z paczki są kasowane i wstawiane od nowa |
-| `fx_rates` | `rate_date`, `currency` | Kurs NBP, tabela A. `rate_date` to dzień zrzutu, `effective_date` to dzień publikacji NBP. PLN ma kurs `1.0` i źródło `identity` |
+| `job_observation_skills` | `job_id`, `scraped_at`, `skill` | Wymagania oferty w tym dniu. Lista może się skurczyć, więc dzisiejsze wiersze ofert z paczki są kasowane i wstawiane od nowa |
+| `fx_rates` | `rate_date`, `currency` | Kursy walut, które występują w ofertach. Pobierane z NBP |
 
 `scraped_at` jest liczone raz w `main.py` i przekazane do loadu.
 
-W dbt:
+## Modele dbt
 
-- `stg_job_observations` mnoży `monthly_salary_avg` przez kurs z dnia zrzutu.
-- `stg_job_observation_skills` podmienia synonim ze słownika (`postgres` → `postgresql`, `k8s` → `kubernetes`). Brak synonimu zostawia surową nazwę.
-- `fct_market_daily` to jeden wiersz na dzień: liczba ofert, udział remote, średnia pensja w PLN dla Junior, Mid, Senior, Expert i Lead.
-- `fct_skill_daily` to jeden wiersz na skill i dzień. Seed `skill_blocklist` wycina kategorie `ai` i `data engineering`, nie synonimy.
+| Model | Znaczenie |
+| --- | --- |
+| `stg_job_observations` | Widok. Oferta z danego dnia, pensja miesięczna razy kurs NBP |
+| `stg_job_observation_skills` | Widok. Wymaganie po słowniku synonimów. Brak synonimu zostawia surową nazwę |
+| `fct_market_daily` | Tabela. Jeden wiersz na dzień: liczba ofert, udział remote, średnie pensje |
+| `fct_skill_daily` | Tabela. Jeden wiersz na wymaganie i dzień. `ai` i `data engineering` to kategorie z ogłoszenia, nie technologie, więc nie wchodzą do rankingu |
+
+## Przykład wyniku
+
+Jeden wiersz `fct_market_daily` to jeden dzień zrzutu. Średnie są miesięczne i już w PLN, po kursie NBP. Oferty bez pensji wchodzą do liczby ofert i udziału pracy zdalnej, ale nie do średniej.
+
+| scraped_at | total_jobs | remote_jobs_percentage | avg_pln_junior | avg_pln_mid | avg_pln_senior | avg_pln_expert | avg_pln_lead |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-10-15 | 3069 | 86.74 | 16037 | 21511 | 25472 | 27529 | 29600 |
+| 2026-10-14 | 3059 | 86.47 | 16037 | 21471 | 25660 | 27909 | 29600 |
+| 2026-10-13 | 3027 | 86.75 | 16705 | 21371 | 25636 | 27570 | 29723 |
 
 ## Uruchomienie lokalne
 
@@ -41,7 +53,6 @@ Z katalogu `job_market_etl`:
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-pip install psycopg2-binary
 
 cp .env.example .env
 ```
@@ -53,7 +64,7 @@ python -m pytest tests/test_salary.py -q
 python -m src.main
 ```
 
-dbt nie czyta pliku `.env`. Zmienne trzeba wyeksportować, a port w `dbt_transform/profiles.yml` jest wpisany na sztywno jako `5432`.
+Po ETL odpal dbt. Najpierw wyeksportuj zmienne z `.env`, potem zbuduj modele:
 
 ```bash
 set -a
@@ -63,8 +74,8 @@ cd ../dbt_transform
 dbt build --profiles-dir .
 ```
 
-`dbt build` odpala seedy, modele i testy. Test dbt pada, gdy zapytanie zwróci jakikolwiek wiersz albo gdy `scraped_at` w `fct_market_daily` nie jest unikalne.
+`dbt build` ładuje seedy, buduje modele i uruchamia testy. Połączenie idzie na port `5432`.
 
-## GitHub Actions
+## GitHub Action
 
-Workflow `Daily Job Market ETL` startuje codziennie o 03:00 UTC i ręcznie przez `workflow_dispatch`. Kolejność: instalacja, `pytest`, ETL, `dbt build`. Czerwony test zatrzymuje load. Secrety mają te same nazwy co zmienne w `.env.example`.
+Workflow startuje codziennie o 03:00 UTC lub można go odpalić ręcznie. Testy wykonują się przed pobraniem ofert. Nieudany pytest zatrzymuje dalszy proces, więc do bazy nic nie trafia. Po zapisie danych uruchamiane jest `dbt build`.
